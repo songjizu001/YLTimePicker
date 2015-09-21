@@ -15,6 +15,12 @@ GitHub：[songjizu001](https://github.com/songjizu001)
 
 # <a id="Examples"></a> Examples【示例】
 
+
+![](https://coding.net/u/songjizu/p/Time/git/blob/master/TimePick/YLTimePicker.gif)
+![(demo)](https://coding.net/u/songjizu/p/Time/git/blob/master/TimePick/11111.png)
+![(demo)](https://coding.net/u/songjizu/p/Time/git/blob/master/TimePick/12222.png)
+
+
 ```objc
 @interface YLTimePicker ()<PopTimeViewDelegate>
 

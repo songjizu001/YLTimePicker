@@ -146,10 +146,10 @@
 #pragma mark - scrillViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
    
-//    NSLog(@"scrollView.contentOffset.x = %f,%f",scrollView.contentOffset.x ,scrollView.frame.size.width);
+    NSLog(@"scrollView.contentOffset.x = %f,%f",scrollView.contentOffset.x ,scrollView.frame.size.width);
     CGFloat rigth = 0;
     if (kDevice_Is_iPhone5||kDevice_Is_iPhone4) {
-        rigth = 420;
+        rigth = 320;
     }else if (kDevice_Is_iPhone6){
         rigth = 265;
     }else if (kDevice_Is_iPhone6Plus){
