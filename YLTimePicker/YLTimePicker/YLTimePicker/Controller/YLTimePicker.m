@@ -11,8 +11,6 @@
 #import "PopTimeView.h"
 #import "YLDateScrollView.h"
 #import "DateView.h"
-#import "TPKeyboardAvoidingScrollView.h"
-
 
 @interface YLTimePicker ()<PopTimeViewDelegate>
 
@@ -33,27 +31,11 @@
     
     [super viewDidLoad];
     
-//    [self setUpButton];
-//    
-//    [self makedic];
-//
-//    self.count = 2;
-//    
-//    
-//    UILabel * lable
+    [self setUpButton];
     
-    
-    TPKeyboardAvoidingScrollView * scroll =[[TPKeyboardAvoidingScrollView alloc]init];
-    scroll.backgroundColor = [UIColor redColor];
-    [self.view addSubview:scroll];
-    [scroll mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    
-    UITextView * lable =[[UITextView alloc]initWithFrame:CGRectMake(100, 400, 100, 30)];
-    lable.backgroundColor =[UIColor whiteColor];
-    [self.view addSubview:lable];
-    
+    [self makedic];
+
+    self.count = 2;
 }
 
 -(void)buttonclick:(UIButton * )sender{

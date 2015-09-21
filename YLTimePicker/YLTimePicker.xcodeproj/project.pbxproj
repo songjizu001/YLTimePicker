@@ -19,10 +19,6 @@
 		82337BB01BA9815700B57CFB /* DateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82337BA91BA9815700B57CFB /* DateView.m */; };
 		82337BB11BA9815700B57CFB /* PopTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82337BAB1BA9815700B57CFB /* PopTimeView.m */; };
 		82337BB21BA9815700B57CFB /* YLDateScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82337BAD1BA9815700B57CFB /* YLDateScrollView.m */; };
-		826B4DEE1BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 826B4DE71BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.m */; settings = {ASSET_TAGS = (); }; };
-		826B4DEF1BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 826B4DE91BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.m */; settings = {ASSET_TAGS = (); }; };
-		826B4DF01BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 826B4DEB1BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.m */; settings = {ASSET_TAGS = (); }; };
-		826B4DF11BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 826B4DED1BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +53,6 @@
 		82337BAB1BA9815700B57CFB /* PopTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTimeView.m; sourceTree = "<group>"; };
 		82337BAC1BA9815700B57CFB /* YLDateScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLDateScrollView.h; sourceTree = "<group>"; };
 		82337BAD1BA9815700B57CFB /* YLDateScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLDateScrollView.m; sourceTree = "<group>"; };
-		826B4DE61BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
-		826B4DE71BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
-		826B4DE81BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		826B4DE91BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		826B4DEA1BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		826B4DEB1BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
-		826B4DEC1BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
-		826B4DED1BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		912D2AFDB0CB05A9ED67C8AC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9543FF0872CD607472F4551E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B56235310974846AEF2262 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +119,6 @@
 			children = (
 				82337B7E1BA9813300B57CFB /* AppDelegate.h */,
 				82337B7F1BA9813300B57CFB /* AppDelegate.m */,
-				826B4DE51BAAB7A20000CDDB /* TPKeyboardAvoiding */,
 				82337BA01BA9815700B57CFB /* YLTimePicker */,
 				82337B841BA9813300B57CFB /* Main.storyboard */,
 				82337B871BA9813300B57CFB /* Images.xcassets */,
@@ -206,21 +193,6 @@
 				82337BAD1BA9815700B57CFB /* YLDateScrollView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		826B4DE51BAAB7A20000CDDB /* TPKeyboardAvoiding */ = {
-			isa = PBXGroup;
-			children = (
-				826B4DE61BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.h */,
-				826B4DE71BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.m */,
-				826B4DE81BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.h */,
-				826B4DE91BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.m */,
-				826B4DEA1BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.h */,
-				826B4DEB1BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.m */,
-				826B4DEC1BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
-				826B4DED1BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
-			);
-			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,14 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82337BAF1BA9815700B57CFB /* DatePickButton.m in Sources */,
-				826B4DF01BAAB7A20000CDDB /* TPKeyboardAvoidingTableView.m in Sources */,
 				82337BB01BA9815700B57CFB /* DateView.m in Sources */,
-				826B4DEE1BAAB7A20000CDDB /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				82337B801BA9813300B57CFB /* AppDelegate.m in Sources */,
-				826B4DF11BAAB7A20000CDDB /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				82337B7D1BA9813300B57CFB /* main.m in Sources */,
 				82337BB21BA9815700B57CFB /* YLDateScrollView.m in Sources */,
-				826B4DEF1BAAB7A20000CDDB /* TPKeyboardAvoidingScrollView.m in Sources */,
 				82337BAE1BA9815700B57CFB /* YLTimePicker.m in Sources */,
 				82337BB11BA9815700B57CFB /* PopTimeView.m in Sources */,
 			);
