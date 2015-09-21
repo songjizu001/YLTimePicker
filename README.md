@@ -20,7 +20,7 @@ GitHub：[songjizu001](https://github.com/songjizu001)
 ![(demo)](http://ww2.sinaimg.cn/bmiddle/e8b49ea5jw1ewa6ezddc1j20hs0vkn0v.jpg)
 ![(demo)](http://ww3.sinaimg.cn/bmiddle/e8b49ea5jw1ewa6ezg7pxj20hs0vkwhn.jpg)
 
-
+# <a id="How to use"></a> How to use【实现方式】
 ```objc
 @interface YLTimePicker ()<PopTimeViewDelegate>
 
