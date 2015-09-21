@@ -20,7 +20,7 @@
 
 @property(nonatomic,strong)YLDateScrollView * scroll;
 
-@property(nonatomic,assign)int  count;
+@property(nonatomic,assign)int  count;//测试代码
 
 @end
 
