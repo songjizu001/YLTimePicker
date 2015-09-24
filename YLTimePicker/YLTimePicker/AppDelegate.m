@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "YLTimePicker.h"
+#import "YLTimePickerController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +20,9 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    YLTimePicker * rootVC = [[YLTimePicker alloc] init];
+    YLTimePickerController * rootVC = [[YLTimePickerController alloc] init];
     self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

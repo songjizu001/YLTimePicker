@@ -23,20 +23,9 @@
 -(instancetype)initWithtitle:(NSString * )title andWithNum:(NSString * )num {
     if (self = [super init]) {
         
-        self.timeLB = [[UILabel alloc]initWithFrame:CGRectMake((((ScreenWidth - 5)/4) - 75)/2, 5, 75, 20)];
-        self.timeLB.font = CustomFont(10);
         self.timeLB.text = title;
-        self.timeLB.textAlignment = NSTextAlignmentCenter;
-        self.timeLB.textColor = [UIColor grayColor];
-//        self.timeLB.backgroundColor =[UIColor redColor];
         [self addSubview:_timeLB];
-        
-        self.statusLB = [[UILabel alloc]initWithFrame:CGRectMake((((ScreenWidth - 5)/4) - 60)/2, 24, 60, 20)];
-        self.statusLB.font = CustomFont(14);
         self.statusLB.text = num;
-        self.statusLB.textColor = [UIColor grayColor];
-        self.statusLB.textAlignment = NSTextAlignmentCenter;
-//        self.statusLB.backgroundColor =[UIColor purpleColor];
         [self addSubview:_statusLB];
         
     }
@@ -47,5 +36,26 @@
 {
     return[[self alloc]initWithtitle:title andWithNum:Status];
 }
+
+-(UILabel *)timeLB{
+    if (!_timeLB) {
+        _timeLB = [[UILabel alloc]initWithFrame:CGRectMake((((ScreenWidth - 5)/4) - 75)/2, 5, 75, 20)];
+        _timeLB.font = CustomFont(10);
+        _timeLB.textAlignment = NSTextAlignmentCenter;
+        _timeLB.textColor = [UIColor grayColor];
+    }
+    return _timeLB;
+}
+
+-(UILabel *)statusLB{
+    if (!_statusLB) {
+        _statusLB =[[UILabel alloc]initWithFrame:CGRectMake((((ScreenWidth - 5)/4) - 60)/2, 24, 60, 20)];
+        _statusLB.font = CustomFont(14);
+        _statusLB.textColor = [UIColor grayColor];
+        _statusLB.textAlignment = NSTextAlignmentCenter;
+    }
+    return _statusLB;
+}
+
 
 @end

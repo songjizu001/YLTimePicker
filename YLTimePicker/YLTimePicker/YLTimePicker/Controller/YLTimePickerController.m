@@ -1,18 +1,19 @@
 //
-//  YLTimePicker.m
-//  CategoryTest
+//  YLTimePickerController.m
+//  YLTimePicker
 //
-//  Created by SongJizu on 15/7/10.
-//  Copyright (c) 2015年 youlemobi. All rights reserved.
+//  Created by SongJizu on 15/9/24.
+//  Copyright © 2015年 youlemobi. All rights reserved.
 //
 
-#import "YLTimePicker.h"
+#import "YLTimePickerController.h"
 #import "Masonry.h"
 #import "PopTimeView.h"
 #import "YLDateScrollView.h"
 #import "DateView.h"
 
-@interface YLTimePicker ()<PopTimeViewDelegate>
+
+@interface YLTimePickerController ()<PopTimeViewDelegate>
 
 @property(nonatomic,strong)NSMutableArray * dateArrM;
 
@@ -21,11 +22,9 @@
 @property(nonatomic,strong)YLDateScrollView * scroll;
 
 @property(nonatomic,assign)int  count;//测试代码
-
 @end
 
-
-@implementation YLTimePicker
+@implementation YLTimePickerController
 
 -(void)viewDidLoad{
     
@@ -34,7 +33,7 @@
     [self setUpButton];
     
     [self makedic];
-
+    
     self.count = 2;
 }
 
@@ -137,13 +136,13 @@
     NSArray * arra4 = @[dic02,dic12,dic22,dic32,dic42,dic52,dic62,dic72,dic82,dic92,dic90,dic63,dic63,dic81];
     NSArray * arra5 = @[dic03,dic13,dic23,dic33,dic43,dic53,dic63,dic73,dic83,dic93,dic90,dic63,dic63,dic81,dic81];
     NSArray * arra6 = @[dic03,dic13,dic23,dic33,dic43,dic53,dic63,dic73,dic83,dic93,dic90,dic63,dic63,dic81,dic81];
-
+    
     NSArray * timeArrM =@[arra1,arra2,arra3,arra4,arra5,arra6];
     
     self.dateArrM = [NSMutableArray arrayWithArray:dateArrM];
     self.timeArrM = [NSMutableArray arrayWithArray:timeArrM];
     
-//    NSDictionary * dicss =@{@"date":dateArrM,@"time":timeArrM};
+    //    NSDictionary * dicss =@{@"date":dateArrM,@"time":timeArrM};
 }
 
 @end
