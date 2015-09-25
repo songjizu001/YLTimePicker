@@ -11,15 +11,15 @@
 #import "DateView.h"
 
 
-#define WINDOW_COLOR                            [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2]
-#define BACKGROUNDVIEWCOLOE                     [UIColor colorWithRed:214 green:214 blue:214 alpha:1]
-#define ANIMATE_DURATION                        0.25f
-#define ScreenWidth                             [UIScreen mainScreen].bounds.size.width
-#define ScreenHeight                            [UIScreen mainScreen].bounds.size.height
-#define POPVIEWDATEBUUTONTAG                    1000    //下面的button的Tag
-#define POPVIEWDATEDAYBUUTONTAG                 100     //日期选择的Tag
-#define UIColorFromRGB(r,g,b)   [UIColor colorWithRed:(float)r/255.0 green:(float)g/255.0 blue:(float)b/255.0 alpha:1.0]
-#define UIColorFromRGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0 green:(float)g/255.0 blue:(float)b/255.0 alpha:a]
+#define WINDOW_COLOR                        [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2]
+#define BACKGROUNDVIEWCOLOE                 [UIColor colorWithRed:214 green:214 blue:214 alpha:1]
+#define ANIMATE_DURATION                    0.25f
+#define ScreenWidth                         [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight                        [UIScreen mainScreen].bounds.size.height
+#define POPVIEWDATEBUUTONTAG                1000    //下面的button的Tag
+#define POPVIEWDATEDAYBUUTONTAG             100     //日期选择的Tag
+#define UIColorFromRGB(r,g,b)               [UIColor colorWithRed:(float)r/255.0 green:(float)g/255.0 blue:(float)b/255.0 alpha:1.0]
+#define UIColorFromRGBA(r,g,b,a)            [UIColor colorWithRed:(float)r/255.0 green:(float)g/255.0 blue:(float)b/255.0 alpha:a]
 
 
 @interface PopTimeView ()
@@ -147,40 +147,23 @@
 
     int numOfLine = 4;
     CGFloat width = (ScreenWidth - 5)/4;
-    NSMutableArray * arrM = [NSMutableArray array];
-    for (int i = 0; i < dateButtonArray.count; i ++) {
-        NSInteger x = i % numOfLine;
-        NSInteger y = i / numOfLine;
-        DatePickButton * dateDetailsButton = [DatePickButton customButtonWithTitle:nil andWithStatus:nil];
-        dateDetailsButton.frame = CGRectMake(1 +(width+1)*x, 41 + (50 + 1)*y, width,50);
-        dateDetailsButton.backgroundColor =[UIColor whiteColor];
-        dateDetailsButton.titleLabel.font = [UIFont systemFontOfSize:14];
-        dateDetailsButton.titleLabel.textColor = [UIColor redColor];
-        dateDetailsButton.tag = POPVIEWDATEBUUTONTAG + i;
+    CGFloat height = 50;
+
+    [dateButtonArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSInteger x = idx % numOfLine;
+        NSInteger y = idx / numOfLine;
+        NSString * time = dateButtonArray[idx][@"label"];
+        NSString * status = dateButtonArray[idx][@"yy_name"];
+        NSDictionary* dic = dateButtonArray[idx];
+        NSInteger a = [dic[@"disabled"] integerValue];
+        DatePickButton * dateDetailsButton = [DatePickButton customButtonWithTitle:time andWithStatus:status andAppointment:a];
+        dateDetailsButton.frame = CGRectMake(1 +(width+1)*x, 41 + (height + 1)*y, width,height);
+        dateDetailsButton.tag = POPVIEWDATEBUUTONTAG + idx;
         dateDetailsButton.dateIndex =(int)sender.tag - POPVIEWDATEDAYBUUTONTAG;
         [dateDetailsButton addTarget:self action:@selector(dateDetailsButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.backGroundView addSubview:dateDetailsButton];
-        [arrM addObject:dateDetailsButton];
-    }
-    for (int i = 0 ; i < dateButtonArray.count; i ++ ) {
-        NSString * time = dateButtonArray[i][@"label"];
-        NSString * status = dateButtonArray[i][@"yy_name"];
-        NSDictionary* dic = dateButtonArray[i];
-        NSInteger a = [dic[@"disabled"] integerValue];
-        DatePickButton * btn = arrM[i];
-        btn.timeLB.text = time;
-        btn.statusLB.text = status;
-        if (a== 1) {
-        btn.backgroundColor =UIColorFromRGBA(248, 249, 252,0.9);
-        btn.timeLB.textColor = [UIColor grayColor];
-        btn.statusLB.textColor = [UIColor grayColor];
-        }else{
-        btn.backgroundColor = [UIColor whiteColor];
-        btn.timeLB.textColor = UIColorFromRGBA(251, 79, 40,0.8);
-        btn.statusLB.textColor = UIColorFromRGBA(251, 79, 40,0.8);
-        }
-    }
- 
+    }];
+
 }
 
 #pragma mark -  PopTimeViewDelegate

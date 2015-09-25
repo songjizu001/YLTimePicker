@@ -16,6 +16,9 @@
 
 @property(nonatomic,strong)UILabel * statusLB;
 
-+(instancetype)customButtonWithTitle:(NSString *)title andWithStatus:(NSString *)Status;
++(instancetype)customButtonWithTitle:(NSString *)title andWithStatus:(NSString *)Status andAppointment:(NSInteger)Appointment;
+
+-(void)setAllowAppointment;
+-(void)setDoNotMakeAppointment;
 
 @end
